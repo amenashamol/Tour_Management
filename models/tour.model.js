@@ -41,14 +41,14 @@ const tourSchema=mongoose.Schema({
 
   //mogooges middleware for saving data :pre/post
 
-  tourSchema.pre('save',function(next){
-    console.log('before saving data')
-    //this->
-    if(this.quantity==0){
-        this.status='out-of-stock'
-    }
-    next()
-  })
+//   tourSchema.pre('save',function(next){
+//     console.log('before saving data')
+//     //this->
+//     if(this.quantity==0){
+//         this.status='out-of-stock'
+//     }
+//     next()
+//   })
 
 
 
