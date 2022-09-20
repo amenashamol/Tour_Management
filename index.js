@@ -1,6 +1,5 @@
 const mongoose= require("mongoose")
 const dotenv=require("dotenv").config()
-var multer = require('multer');
 const colors=require("colors")
 
 
