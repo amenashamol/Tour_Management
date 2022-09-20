@@ -23,7 +23,10 @@ const tourSchema=mongoose.Schema({
         required:true,
         min:[0,"price can't be negative"]
     },
-      
+    view:{
+        type:Number,
+        required:true
+    },  
     
 
     status:{

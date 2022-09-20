@@ -118,7 +118,7 @@ exports.updateTourById=async(req,res,next)=>{
         
         res.status(200).json({
         status:'success',
-        message:'Data inserted successfully',
+        message:'Data updated successfully',
         data:result
     })
         

@@ -21,17 +21,17 @@ exports.createTourService=async(data)=>{
     return tour
 }
 exports.getTourByIdService=async(tourId)=>{
-    const tours=await Tour.find({_id:tourId})
+    const tours=await Tour.findOneAndUpdate({_id:tourId},{$inc:{view:1}},{new:true})
     return tours
 }
 exports.updateTourByIdService=async(tourId,data)=>{
-    // const result= await tour.updateOne({_id:tourId},{$set:req.body},{
-    //     runValidators:true
-    //     })
-
-    const result= await Tour.updateOne({_id:tourId},{$inc:data},{
+    const result= await Tour.updateOne({_id:tourId},{$set:data},{
         runValidators:true
         })
+
+    // const result= await Tour.updateOne({_id:tourId},{$inc:data},{
+    //     runValidators:true
+    //     })
 
     // const tour= await tour.findById(tourId)
     // const result= await tour.set(data).save()
