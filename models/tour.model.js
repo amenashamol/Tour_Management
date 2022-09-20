@@ -10,10 +10,10 @@ const tourSchema=mongoose.Schema({
         minLength:[3, "Name must be  at least 3 charecter"],
         maxLength:[100, "name is too larger"]
     },
-    image:{
-        type:Image
-        // required:true
-    },
+    // image:{
+    //     type:Image
+    //     // required:true
+    // },
     description:{
         type:String,
         required:true
@@ -39,22 +39,7 @@ const tourSchema=mongoose.Schema({
     timestamps:true,
   })
 
-  //mogooges middleware for saving data :pre/post
-
-//   tourSchema.pre('save',function(next){
-//     console.log('before saving data')
-//     //this->
-//     if(this.quantity==0){
-//         this.status='out-of-stock'
-//     }
-//     next()
-//   })
-
-
-
-tourSchema.methods.logger=function(){
-    console.log(`data save for ${this.name}`)
-}
+ 
 
   //SCHEMA -> MODEL -> QUERY
 
