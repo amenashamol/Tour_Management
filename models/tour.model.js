@@ -39,10 +39,12 @@ const tourSchema=mongoose.Schema({
     timestamps:true,
   })
 
- 
+  tourSchema.methods.logger=function(){
+    console.log(`data save for ${this.name}`)
+}
 
   //SCHEMA -> MODEL -> QUERY
 
-  const tour=mongoose.model('tour', tourSchema)
+  const Tour=mongoose.model('Tour', tourSchema)
 
-  module.exports=tour
+  module.exports=Tour
