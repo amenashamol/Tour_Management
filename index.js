@@ -7,7 +7,7 @@ const colors=require("colors")
 const app = require("./app")
 
 //database connection
-mongoose.connect(process.env.DATABASE_LOCAl).then(()=>{
+mongoose.connect('mongodb://127.0.0.1:27017/tour-management').then(()=>{
      console.log('database connection is successful'.red.bold)
 })
 
